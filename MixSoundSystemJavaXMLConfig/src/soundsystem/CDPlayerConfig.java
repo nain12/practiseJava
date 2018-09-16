@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ImportResource;
 
 @Configuration
 @Import(CDConfig.class)
-@ImportResource("classpath:Beans.xml")
+@ImportResource("classpath:Bean.xml")
 public class CDPlayerConfig {
 
 	@Bean

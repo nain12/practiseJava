@@ -13,7 +13,7 @@ import soundsystem.CompactDisc;
 import soundsystem.MediaPlayer;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "/src/soundsystem/Bean.xml")
+@ContextConfiguration(locations = "/Bean.xml")
 public class CDPlayerTest {
 
 	@Rule
@@ -33,6 +33,11 @@ public class CDPlayerTest {
 	@Test
 	public void play() {
 		player.play();
-		assertEquals("Playing Sgt. Pepper's Lonely Hearts Club Band by The Beatles\r\n", systemOutRule.getLog());
+		assertEquals("Playing Sgt. Pepper's Lonely Hearts Club Band by The Beatles\r\n"
+				+ "Tracks: Sgt. Pepper's Lonely Hearts Club Band\r\n"
+				+ "Tracks: With a Little Help from My Friends\r\n"
+				+ "Tracks: Lucy in the Sky with Diamonds\r\n"
+				+ "Tracks: Getting Better\r\n"
+				+ "Tracks: Fixing a Hole\r\n", systemOutRule.getLog());
 	}
 }
