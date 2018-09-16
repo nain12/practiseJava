@@ -11,6 +11,7 @@ public class CDPlayer implements MediaPlayer {
 		this.cd = cd;
 	}
 
+	@Autowired
 	public CDPlayer(CompactDisc cd) {
 		this.cd = cd;
 	}
